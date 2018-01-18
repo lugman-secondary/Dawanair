@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery </title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/script3.js"></script>
+  <script src="js/objetosViajesEnteros.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style3.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/deal.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  </script>
+</head>
+
+<body>
+  <div id="cabecera">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="./index.html"><img style="width:50px;  margin-left: 15px;" src="./img/logo.png" alt="">Solvam</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" style="marging-rigth:20px;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="margin-left:50px;">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./about.html">About us <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+        <a href="singIn.html" style="background:var(--Principal2); padding-right:10px " id="singIn" data-target=".bd-example-modal-lg" class="btn " data-toggle="modal">Sing in</a>
+        <div class="nav-item dropdown">
+          <div class="LOGIN">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Log in
+</a>
+            <div class="dropdown-menu" id="perfil" aria-labelledby="navbarDropdown">
+              <div class="card card-container W100 H100 cardA">
+
+                <h2 class="Cc"><img id="profile-img" style="width:60px; margin-right:15px;" class="profile-img-card" src="img/avatar_2x.png" /><b>Log in</b></h2>
+                <p class="Cc red todo0 desaparecer errorLogin">Errror! passord or username not are correct!</p>
+                <p id="profile-name" class="profile-name-card logg"></p>
+                <form class="form-signin">
+                  <span id="reauth-email" class="reauth-email"></span>
+                  <input type="text" id="inputUser" class="form-control" placeholder="username" required autofocus>
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  <div id="remember" class="checkbox">
+                    <label>
+<input type="checkbox" value="remember-me"> Remember me
+</label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block btn-signin" id="login" type="submit">Log in</button>
+                </form>
+                <!-- /form -->
+                <!-- <a href="#" class="forgot-password">
+Forgot the password?
+</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="LOGOUT">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Log  out
+</a>
+            <div class="dropdown-menu" id="perfil" aria-labelledby="navbarDropdown" style="padding:0px;">
+              <div class="card card-container   cardA">
+                <a href="#" class="Cc" id="logout" style="
+    padding: 10px;
+    font-weight: bold;
+    background-color: #262626;
+    color: white;">Log out</a>
+              </div>
+
+              <!-- /form -->
+              <!-- <a href="#" class="forgot-password">
+Forgot the password?
+</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="container">
+  </div>
+  <!-- /container -->
+  <div class="contendorDeal">
+    <div class="row">
+      <div class="col col-md-6 pad">
+        <h2 class="tit Tit Cc">Francia</h2>
+
+        <strong><h5 style="text-align:left; font-weight:bold;" id="FechaObj">Date: 12/12/2017</h5></strong>
+        <strong><h5 style="text-align:left;   font-weight:bold;" id="ClaseObj">Class: Bunisses</h5></strong>
+        <strong><h5 style="text-align:left;  font-weight:bold;" id="Hora1Obj">Clase: Bunisses</h5></strong>
+        <strong><h5 style="text-align:left; margin-bottom:-50px; font-weight:bold;" id="Hora2Obj">Clase: Bunisses</h5></strong>
+
+        <div class="miniDes estC">
+          <img src="./img/quality.png" alt="">
+          <div>
+            <div class="stars">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container contMini">
+
+          <div class="miniDes">
+            <img src="./img/price.png" alt="">
+            <div>
+              <h3 id="price">300€</h3>
+            </div>
+          </div>
+          <div class="miniDes">
+            <img src="./img/temp.png" alt="">
+            <div>
+              <h3 id="temp">Low</h3>
+            </div>
+          </div>
+          <div class="miniDes">
+            <img src="./img/time.png" alt="">
+            <div>
+              <h3 id="time">1 Hour</h3>
+            </div>
+          </div>
+        </div>
+        <div class="Res">
+          <button type="button" class="btn" id="Reservame">Book by yourself<h3 id="price">300€</h3></button>
+        </div>
+      </div>
+
+      <div class="col col-md-6">
+        <div class="container conImgPrincipal">
+          <h3 class="Tit">New York</h3>
+          <img class="imgPrincipal" src="https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5244714388001_5205235439001-vs.jpg?pubId=5104226627001&videoId=5205235439001" alt="">
+
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+      <h3>Description about the trip</h3>
+      <p class="desc ">Francia (en francés, France), oficialmente República Francesa (République française), es un país soberano, miembro de la Unión Europea, constituido en Estado social y democrático de derecho y cuya forma de gobierno es la república semipresidencialista.
+        Su territorio, que incluye regiones de ultramar, se extiende sobre una superficie total de 643 801 km².1​ En 2015 el país contaba con 66,3 millones de habitantes, 64,2 en la Francia metropolitana y 2,1 en los territorios de ultramar.5​ El territorio
+        de Francia, y su parte metropolitana o continental,6​ se ubica en Europa Occidental, donde limita, al sur, con el mar Mediterráneo, Mónaco (4,4 km) e Italia (488 km); al suroeste, con España (623 km), Andorra (56,6 km) y el mar Cantábrico; al
+        oeste, con el océano Atlántico; al norte, con el canal de la Mancha, Reino Unido (22,6 m., en medio del túnel submarino que los une), el mar del Norte y Bélgica (620 km), y al este, con Luxemburgo (73 km), Alemania (451 km) y Suiza (573 km). Su
+        territorio insular europeo comprende la isla de Córcega, en el Mediterráneo occidental, y diversos archipiélagos costeros en el océano Atlántico. En América, es territorio de Francia la Guayana Francesa, que limita con Brasil (673 km)7​ y Surinam
+        (510 km), y las islas y archipiélagos de Martinica, Guadalupe, San Bartolomé, San Martín y San Pedro y Miquelón. En el océano Índico posee las islas de Mayotte y de Reunión, así como los archipiélagos de la Polinesia Francesa, Wallis y Futuna
+        y Nueva Caledonia en el océano Pacífico. Son territorios deshabitados de Francia el atolón de Isla Clipperton, en el Pacífico oriental, y las denominadas Tierras Australes y Antárticas Francesas. Francia es la sexta economía mundial con una muy
+        elevada difusión cultural en el contexto internacional. Es miembro del G8, de la zona euro y del espacio Schengen, y alberga a muchas de las más importantes empresas multinacionales, líderes en diversos segmentos de la industria y del sector primario,
+        además de que es el primer destino turístico mundial, con 83 millones de visitantes extranjeros por año (7 % del PIB).8​ Francia, donde se redactó la Declaración de los Derechos del Hombre y del Ciudadano de 1789, es miembro fundador de la Organización
+        de las Naciones Unidas y uno de los cinco miembros permanentes de su Consejo de Seguridad.9​ Francia alberga las sedes del Consejo de Europa y del Parlamento Europeo, ambas en Estrasb</p>
+
+    </div>
+  </div>
+  <div id="footer">
+    <div id="central" class="container">
+      <div class="row subFooter">
+
+        <div class="col col-md-3  Cc">
+          <h2 class="Cw Ftitulo">Our offices</h2>
+          <hr>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6107.428881976702!2d-105.28952614322448!3d40.05947314194615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sEstados+Unidos!5e0!3m2!1ses!2ses!4v1513203334561"
+            width="220" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <div class="col col-md-6  Cc">
+          <h2 class="Cw Ftitulo">Collaborations</h2>
+          <hr>
+          <ul class="Fimages">
+            <img src="./img/aeg.jpg" alt="">
+            <img src="./img/aeg.jpg" alt="">
+            <img src="./img/ib.png" alt="">
+            <img src="https://vignette.wikia.nocookie.net/logopedia/images/9/93/Copa_Airlines.svg/revision/latest?cb=20100515064801" alt="">
+          </ul>
+        </div>
+        <div class="col col-md-3  Cc">
+          <h2 class="Cw Ftitulo ">Find us</h2>
+          <hr>
+          <ul>
+            <li class="Fli"><a class="icF" href="#!"><span class="fa fa-facebook-official "></span>Facebook</a></li>
+            <li class="Fli"><a class="icF" href="#!"><span class="fa fa-twitter-square"></span>Twitter</a></li>
+            <li class="Fli"><a class="icF" href=""><span class="left-align left-align fa fa-phone"></span> +34 645332532 </a></li>
+            <li class="Fli"><a class="icF" href="#!"><span class="fa fa-envelope" aria-hidden="true"></span> Airsolvam@solvam.net </a></li>
+            <input type="text" name="" class="form-control" value="" style="margin:10px;">
+            <h2 class="Cc btn btn-danger" style="color:white;margin-top:10px;">Subscribe</h2>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="copyr">
+      <h5 class="Cw Cc" style="color:white;">© 2017 Copyright Dawanair</h5>
+    </div>
+  </div>
+
+  <!-- //////////////////Formulario //////////////////////////-->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content fondoM">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+        <div class="row cabForm">
+          <div class="col col-md-4"><img class="Fcrear" src="http://blog.aulaformativa.com/wp-content/uploads/2016/08/consideraciones-mejorar-primera-experiencia-de-usuario-aplicaciones-web-perfil-usuario.jpg" alt=""></div>
+          <div class="col col-md-8">
+            <h2>Crear cuenta usuario</h2></div>
+        </div>
+        <div class="container" id="ContForm">
+          <form data-toggle="validator" id="myForm" role="form">
+            <div class="row">
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="Nombre" class="control-label">Name</label><br>
+                  <input class="form-control" type="text" id="Nombre" name="" value="" placeholder="Nombre" data-error="Enter a valid name" required>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="">Surnames</label><br>
+                  <input class="form-control" type="text" name="" value="" placeholder="Apellidos" data-error="Enter a valids surnames" required>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="inputEmail" class="control-label" required>Mail</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="That email address is invalid" required>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+
+                  <label for="">Telefono</label><br>
+                  <input type="tel" class="form-control" name="" value="" placeholder="Telefono">
+                  <!-- <div class="help-block with-errors red"></div> -->
+                </div>
+              </div>
+
+
+              <div class="col col-md-6 col-sm-12">
+
+                <div class="form-group">
+
+                  <label for="">Pais</label><br>
+                  <input class="form-control" type="text" name="" value="" placeholder="Pais">
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+
+                  <label for="">Sexo</label><br>
+                  <select class="form-control" class="" name="" required>
+                  <option class="Cc" value="Hombre" selected>Hombre</option>
+                  <option class="Cc" value="mujer">mujer</option>
+                  <option class="Cc" value="otoro">otoro</option>
+                </select>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="">usuario</label><br>
+                  <input class="form-control" type="text" name="" value="" placeholder="usuario" data-error="Enter a valid name of user" required>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="">Contraseña</label><br>
+                  <input class="form-control" id="passw1" type="password" name="passw1" data-minlength="5" value="" data-error="Enter a password  (min 5 charters)" placeholder="password" required>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="">Selecciona foto perfil</label><br>
+                  <input class="form-control" id="file" type="file" name="" value="" placeholder="Select photo">
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="">Repite contraseña</label><br>
+                  <input required class="form-control" id="passw2" data-equals="passw1" type="password" name="" value="" data-error="Enter a some passwor" placeholder="Repeat password
+">
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-12 mTyB">
+                <div class="form-group">
+                  <input type="checkbox" name="" value="" required><span>Aceptas los <a href="#">terminos y condiciones</a> espuestas anteriormente.</span>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 "> </div>
+              <div class="col col-md-6 botones">
+                <div class="form-group bott">
+                  <input type="submit" name="" value="Crear" class="btn btn-success botonVerde">
+                </div>
+                <input type="button" name="" value="Cancelar" class="btn btn-danger botonRojo" data-dismiss="modal">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--_______________________ Fin-Formulario ___________________-->
+
+</body>
+
+</html>
+s

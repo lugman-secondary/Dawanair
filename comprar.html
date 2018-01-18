@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery </title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+  <script src="js/objetosViajes.js"></script>
+  <script src="./js/objetosViajesEnteros.js"></script>
+  <script src="js/ofertas.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/script3.js"></script>
+  <script src="js/script4.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style4.css">
+  <link rel="stylesheet" href="css/style3.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/carrusel.css">
+  <link rel="stylesheet" href="css/ofertas.css">
+
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  </script>
+</head>
+
+<body>
+  <div class="alert alert-success compraFinalizada " role="alert">
+    <h4 class="alert-heading Cc">Purchase made successfully!</h4>
+    <strong>
+    <p>Porfavor revisa tu corro para ver los detalles y ver tu vuelo y comprovar que te  ha llegado todo correcto.</p>
+    <p class="mb-0">If you have any doubt, contact us at info@dawanair.com</p></strong>
+  </div>
+  <div id="cabecera">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="./index.html"><img style="width:50px;  margin-left: 15px;" src="./img/logo.png" alt="">Solvam</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" style="marging-rigth:20px;" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="margin-left:50px;">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./about.html">About us <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+
+        <a href="singIn.html" style="background:var(--Principal2); padding-right:10px " id="singIn" data-target=".bd-example-modal-lg" class="btn " data-toggle="modal">Sing in</a>
+        <div class="nav-item dropdown">
+          <div class="LOGIN">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Log in
+</a>
+            <div class="dropdown-menu" id="perfil" aria-labelledby="navbarDropdown">
+              <div class="card card-container W100 H100 cardA">
+
+                <h2 class="Cc"><img id="profile-img" style="width:60px; margin-right:15px;" class="profile-img-card" src="img/avatar_2x.png" /><b>Log in</b></h2>
+                <p class="Cc red todo0 desaparecer errorLogin">Errror! passord or username not are correct!</p>
+                <p id="profile-name" class="profile-name-card logg"></p>
+                <form class="form-signin">
+                  <span id="reauth-email" class="reauth-email"></span>
+                  <input type="text" id="inputUser" class="form-control" placeholder="username" required autofocus>
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  <div id="remember" class="checkbox">
+                    <label>
+<input type="checkbox" value="remember-me"> Remember me
+</label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block btn-signin" id="login" type="submit">Log in</button>
+                </form>
+                <!-- /form -->
+                <!-- <a href="#" class="forgot-password">
+Forgot the password?
+</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="LOGOUT">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Log  out
+</a>
+            <div class="dropdown-menu" id="perfil" aria-labelledby="navbarDropdown" style="padding:0px;">
+              <div class="card card-container   cardA">
+                <a href="#" class="Cc" id="logout" style="
+    padding: 10px;
+    font-weight: bold;
+    background-color: #262626;
+    color: white;">Log out</a>
+              </div>
+
+              <!-- /form -->
+              <!-- <a href="#" class="forgot-password">
+Forgot the password?
+</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- Carrusel  -->
+  <div id="ConTsillas">
+    <div id="Sillas">
+      <h2 class="Cc"><b><u>select the seats you want</u></b></h2>
+      <div class="filas1 fil">
+        <div class="contButacas">
+          <img id="fondo" src="img/avion.gif" alt="">
+          <ol id="selectable">
+            <div id="uno">
+              <li class="ui-state-default" data-posicion="Vip 1">Vip 1</li>
+              <li class="ui-state-default" data-posicion="Vip 2">Vip 2</li>
+            </div>
+            <div id="dos">
+              <li class="ui-state-default" data-posicion="Vip 3">Vip 3</li>
+              <li class="ui-state-default" data-posicion="Vip 4">Vip 4</li>
+            </div>
+            <div id="tres">
+              <li class=" " data-posicion="3">3</li>
+              <li class="ui-state-default" data-posicion="6">6</li>
+              <li class="ui-state-default" data-posicion="9">9</li>
+              <li class="ui-state-default" data-posicion="12">12</li>
+              <li class="ui-state-default" data-posicion="15">15</li>
+              <li class="ui-state-default" data-posicion="18">18</li>
+            </div>
+            <div id="cuatro">
+              <li class="ui-state-default" data-posicion="2">2</li>
+              <li class="ui-state-default" data-posicion="5">5</li>
+              <li class="ui-state-default" data-posicion="8">8</li>
+              <li class="ui-state-default" data-posicion="11">11</li>
+              <li class="ui-state-default" data-posicion="14">14</li>
+              <li class="ui-state-default" data-posicion="17">17</li>
+            </div>
+            <div id="cinco">
+              <li class="ui-state-default" data-posicion="1">1</li>
+              <li class="ui-state-default" data-posicion="4">4</li>
+              <li class="ui-state-default" data-posicion="7">7</li>
+              <li class="ui-state-default" data-posicion="10">10</li>
+              <li class="ui-state-default" data-posicion="13">13</li>
+              <li class="ui-state-default" data-posicion="16">16</li>
+            </div>
+            <div id="seis">
+              <li class="ui-state-default" data-posicion="23">23</li>
+              <li class="ui-state-default" data-posicion="26">26</li>
+              <li class="ui-state-default" data-posicion="29">29</li>
+              <li class="ui-state-default" data-posicion="32">32</li>
+              <li class="ui-state-default" data-posicion="35">35</li>
+              <li class="ui-state-default" data-posicion="38">38</li>
+            </div>
+            <div id="siete">
+              <li class="ui-state-default" data-posicion="22">22</li>
+              <li class="ui-state-default" data-posicion="25">25</li>
+              <li class="ui-state-default" data-posicion="28">28</li>
+              <li class="ui-state-default" data-posicion="31">31</li>
+              <li class="ui-state-default" data-posicion="34">34</li>
+              <li class="ui-state-default" data-posicion="37">37</li>
+            </div>
+            <div id="ocho">
+              <li class="ui-state-default" data-posicion="21">21</li>
+              <li class="ui-state-default" data-posicion="24">24</li>
+              <li class="ui-state-default" data-posicion="27">27</li>
+              <li class="ui-state-default" data-posicion="30">30</li>
+              <li class="ui-state-default" data-posicion="33">33</li>
+              <li class="ui-state-default" data-posicion="36">36</li>
+            </div>
+
+          </ol>
+          <div class="">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="detalles">
+      <h1 class="Tcarrito">Deal : Moscow</h1>
+      <div id="central">
+        <div class="row elCarrito">
+          <div class="col col-md-8"><u><strong>Places</strong> </u></div>
+          <div class="col col-md-4"><u><strong>Price</strong></u><span></span></div>
+
+        </div>
+      </div>
+
+      <div id="conf">
+        <button class="btn btn-success" id="confirm">Confirm</button>
+      </div>
+
+    </div>
+
+  </div>
+  <div id="footer">
+    <div id="central" class="container">
+      <div class="row subFooter">
+
+        <div class="col col-md-3  Cc">
+          <h2 class="Cw Ftitulo">Our offices</h2>
+          <hr>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6107.428881976702!2d-105.28952614322448!3d40.05947314194615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sEstados+Unidos!5e0!3m2!1ses!2ses!4v1513203334561"
+            width="220" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+        <div class="col col-md-6  Cc">
+          <h2 class="Cw Ftitulo">Collaborations</h2>
+          <hr>
+          <ul class="Fimages">
+            <img src="./img/aeg.jpg" alt="">
+            <img src="./img/aeg.jpg" alt="">
+            <img src="./img/ib.png" alt="">
+            <img src="https://vignette.wikia.nocookie.net/logopedia/images/9/93/Copa_Airlines.svg/revision/latest?cb=20100515064801" alt="">
+          </ul>
+        </div>
+        <div class="col col-md-3  Cc">
+          <h2 class="Cw Ftitulo ">Find us</h2>
+          <hr>
+          <ul>
+            <li class="Fli"><a class="icF" href="#!"><span class="fa fa-facebook-official "></span>Facebook</a></li>
+            <li class="Fli"><a class="icF" href="#!"><span class="fa fa-twitter-square"></span>Twitter</a></li>
+            <li class="Fli"><a class="icF" href=""><span class="left-align left-align fa fa-phone"></span> +34 645332532 </a></li>
+            <li class="Fli"><a class="icF" href="#!"><span class="fa fa-envelope" aria-hidden="true"></span> Airsolvam@solvam.net </a></li>
+            <input type="text" name="" class="form-control" value="" style="margin:10px;">
+            <h2 class="Cc btn btn-danger" style="color:white;margin-top:10px;">Subscribe</h2>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="copyr">
+      <h5 class="Cw Cc" style="color:white;">© 2017 Copyright Dawanair</h5>
+    </div>
+  </div>
+
+  <!-- //////////////////Formulario //////////////////////////-->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content fondoM">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+        <div class="row cabForm">
+          <div class="col col-md-4"><img class="Fcrear" src="http://blog.aulaformativa.com/wp-content/uploads/2016/08/consideraciones-mejorar-primera-experiencia-de-usuario-aplicaciones-web-perfil-usuario.jpg" alt=""></div>
+          <div class="col col-md-8">
+            <h2>Crear cuenta usuario</h2></div>
+        </div>
+        <div class="container" id="ContForm">
+          <form data-toggle="validator" id="myForm" role="form">
+            <div class="row">
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="Nombre" class="control-label">Name</label><br>
+                  <input class="form-control" type="text" id="Nombre" name="" value="" placeholder="Nombre" data-error="Enter a valid name" required>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="">Surnames</label><br>
+                  <input class="form-control" type="text" name="" value="" placeholder="Apellidos" data-error="Enter a valids surnames" required>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="inputEmail" class="control-label" required>Mail</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="That email address is invalid" required>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+
+                  <label for="">Telefono</label><br>
+                  <input type="tel" class="form-control" name="" value="" placeholder="Telefono">
+                  <!-- <div class="help-block with-errors red"></div> -->
+                </div>
+              </div>
+
+
+              <div class="col col-md-6 col-sm-12">
+
+                <div class="form-group">
+
+                  <label for="">Pais</label><br>
+                  <input class="form-control" type="text" name="" value="" placeholder="Pais">
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+
+                  <label for="">Sexo</label><br>
+                  <select class="form-control" class="" name="" required>
+                  <option class="Cc" value="Hombre" selected>Hombre</option>
+                  <option class="Cc" value="mujer">mujer</option>
+                  <option class="Cc" value="otoro">otoro</option>
+                </select>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="">usuario</label><br>
+                  <input class="form-control" type="text" name="" value="" placeholder="usuario" data-error="Enter a valid name of user" required>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="">Contraseña</label><br>
+                  <input class="form-control" id="passw1" type="password" name="passw1" data-minlength="5" value="" data-error="Enter a password  (min 5 charters)" placeholder="password" required>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="">Selecciona foto perfil</label><br>
+                  <input class="form-control" id="file" type="file" name="" value="" placeholder="Select photo">
+                </div>
+              </div>
+              <div class="col col-md-6 col-sm-12">
+                <div class="form-group">
+                  <label for="">Repite contraseña</label><br>
+                  <input required class="form-control" id="passw2" data-equals="passw1" type="password" name="" value="" data-error="Enter a some passwor" placeholder="Repeat password
+">
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-12 mTyB">
+                <div class="form-group">
+                  <input type="checkbox" name="" value="" required><span>Aceptas los <a href="#">terminos y condiciones</a> espuestas anteriormente.</span>
+                  <div class="help-block with-errors red"></div>
+                </div>
+              </div>
+              <div class="col col-md-6 "> </div>
+              <div class="col col-md-6 botones">
+                <div class="form-group bott">
+                  <input type="submit" name="" value="Crear" class="btn btn-success botonVerde">
+                </div>
+                <input type="button" name="" value="Cancelar" class="btn btn-danger botonRojo" data-dismiss="modal">
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--_______________________ Fin-Formulario ___________________-->
+
+</body>
+
+</html>
